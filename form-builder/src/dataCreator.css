@@ -1,0 +1,24 @@
+.w-100{
+    width: 700px;
+}
+.p-3{
+    
+    padding: 6px;
+}
+.p-10{
+    
+    padding: 10px;
+}
+.border-none{
+    border: none;
+}
+.border-one{
+    border: 1px solid #b6b6b6;
+}
+.mr-10{
+    margin-right: 10px;
+}
+input:focus{
+    background-color: snow;
+    
+}
