@@ -29,9 +29,9 @@ function DataCreator() {
           setQuestionList([
             ...questionList,
             {
-              serialNo : `"${serialNo}"`,
-              question : `"${question}"`,
-              num : `"${num}"`
+              serialNo: `"${serialNo}"`,
+              question: `"${question}"`,
+              num: `"${num}"`,
             },
           ]);
           setSerialNo("");
@@ -40,26 +40,22 @@ function DataCreator() {
       >
         Add question
       </button>
+
       <br />
-      <div className="mt-15">
-     DATA STRUCTURE IN OBJECT FORMAT
-      </div>
+      <div className="mt-15">DATA STRUCTURE IN OBJECT FORMAT</div>
       <div className="border-grey p-30 mb-20">
-      
-      {questionList.map((item) => {
-        return (
-          <>
-          
-          {` {
+        {questionList.map((item) => {
+          return (
+            <>
+              {` {
             serialNo : ${item.serialNo} , 
             question :${item.question},
             num :${item.num}
         },`}
-            <br />
-          
-          </>
-        );
-      })}
+              <br />
+            </>
+          );
+        })}
       </div>
     </div>
   );
