@@ -29,9 +29,9 @@ function DataCreator() {
           setQuestionList([
             ...questionList,
             {
-              serialNo,
-              question,
-              num,
+              serialNo : `"${serialNo}"`,
+              question : `"${question}"`,
+              num : `"${num}"`
             },
           ]);
           setSerialNo("");
@@ -39,7 +39,7 @@ function DataCreator() {
         }}
       >
         Add question
-      </button>{" "}
+      </button>
       <br />
       {questionList.map((item) => {
         return (
@@ -48,7 +48,7 @@ function DataCreator() {
             serialNo : ${item.serialNo} , 
             question :${item.question},
             num :${item.num}
-        },`}{" "}
+        },`}
             <br />
           </>
         );

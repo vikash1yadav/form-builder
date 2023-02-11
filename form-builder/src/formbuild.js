@@ -5,29 +5,40 @@ let newAllQuestionKeyCombinationArray = [];
 function keyCreator(keyquestion) {
   const singleQuestionKeyCombinationArray = [];
   const wordsArray = keyquestion.split(" ");
-  for (let i = 0; i < wordsArray.length; i++) {
-    for (let j = i + 1; j < wordsArray.length; j++) {
-      const firstWord = wordsArray[i];
-      const secondWord = wordsArray[j];
-      const thirdWord = `${firstWord}_${secondWord}`;
-      singleQuestionKeyCombinationArray.push(thirdWord.toLowerCase());
-    }
+  for(let i = 0; i< wordsArray.length; i++){
+    const element1 = wordsArray[i]
+    const element2 = wordsArray[i+1]
+    const element3 = wordsArray[i+2]
+    
+    const key = `${element1}_${element2}_${element3}`
+    singleQuestionKeyCombinationArray.push(key.toLowerCase())
+    if(wordsArray.indexOf(element3) === wordsArray.length-1) break;
   }
-
-  newAllQuestionKeyCombinationArray.push(
-    singleQuestionKeyCombinationArray[
+  const randomKeyOfSingleQuestion = singleQuestionKeyCombinationArray[
+    Math.floor(Math.random() * singleQuestionKeyCombinationArray.length)
+  ]
+  if(!newAllQuestionKeyCombinationArray.includes(randomKeyOfSingleQuestion)){
+    newAllQuestionKeyCombinationArray.push(
+      randomKeyOfSingleQuestion
+      );
+  } else {
+    const anotherRandomKey =  singleQuestionKeyCombinationArray[
       Math.floor(Math.random() * singleQuestionKeyCombinationArray.length)
     ]
-  );
+    newAllQuestionKeyCombinationArray.push(
+      anotherRandomKey
+    )
+  }
 }
-function StructureCreator({ num, question, keyCreator }) {
+
+function StructureCreator({ num, question, keyCreator , serialNo }) {
   keyCreator(question);
 
   const structureHTML = `
         <div class="row-container page-break">
         <div class="row-fix">
             <div class="column w-5 align-center">
-                <span class="font-style"> ${num} </span>
+                <span class="font-style"> ${serialNo} </span>
             </div>
             <div class="column w-45 align-left">
                 <p>
@@ -72,6 +83,7 @@ function Formbuild() {
           <StructureCreator
             key={item.num}
             num={item.num}
+            serialNo = {item.serialNo}
             question={item.question}
             keyCreator={keyCreator}
           />
