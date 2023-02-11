@@ -8,8 +8,6 @@ function DataCreator() {
   const [question, setQuestion] = useState("");
   const [num, setNum] = useState(1);
 
-  
-
   return (
     <div>
       <input
@@ -47,6 +45,7 @@ function DataCreator() {
      DATA STRUCTURE IN OBJECT FORMAT
       </div>
       <div className="border-grey p-30 mb-20">
+      
       {questionList.map((item) => {
         return (
           <>
@@ -57,6 +56,7 @@ function DataCreator() {
             num :${item.num}
         },`}
             <br />
+          
           </>
         );
       })}
