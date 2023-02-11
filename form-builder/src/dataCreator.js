@@ -8,6 +8,8 @@ function DataCreator() {
   const [question, setQuestion] = useState("");
   const [num, setNum] = useState(1);
 
+  
+
   return (
     <div>
       <input
@@ -41,10 +43,15 @@ function DataCreator() {
         Add question
       </button>
       <br />
+      <div className="mt-15">
+     DATA STRUCTURE IN OBJECT FORMAT
+      </div>
+      <div className="border-grey p-30 mb-20">
       {questionList.map((item) => {
         return (
           <>
-            {` {
+          
+          {` {
             serialNo : ${item.serialNo} , 
             question :${item.question},
             num :${item.num}
@@ -53,6 +60,7 @@ function DataCreator() {
           </>
         );
       })}
+      </div>
     </div>
   );
 }

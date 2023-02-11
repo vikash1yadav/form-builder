@@ -30,7 +30,6 @@ function keyCreator(keyquestion) {
     )
   }
 }
-
 function StructureCreator({ num, question, keyCreator , serialNo }) {
   keyCreator(question);
 
@@ -80,13 +79,16 @@ function Formbuild() {
     <div>
       {questionsArray.map((item) => (
         <>
-          <StructureCreator
+        <div className="border-grey mb-8 p-10">
+        <StructureCreator
             key={item.num}
             num={item.num}
             serialNo = {item.serialNo}
             question={item.question}
             keyCreator={keyCreator}
           />
+        </div>
+       
         </>
       ))}
     </div>
