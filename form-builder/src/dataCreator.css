@@ -22,3 +22,23 @@ input:focus{
     background-color: snow;
     
 }
+.border-grey{
+    border: 1px dashed #b6b6b6;
+}
+.p-30{
+    padding: 20px;
+}
+.mb-20{
+    
+    margin-bottom: 20px;
+}
+.mt-15{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+.p-10{
+  padding: 10px;  
+}
