@@ -8,7 +8,7 @@ function App() {
   const [showHTML , setShowHTML] = useState(false)
   return (
     <div className="App">
-      <div className="align-center">
+      <div className="align-center color">
        <h2>
        FORM STRUCTURE BUILDER
       </h2> 
