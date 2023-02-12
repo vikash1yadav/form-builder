@@ -5,11 +5,15 @@ function Footer() {
     <div
       style={{
         height: "30px",
+        width:"100%",
         backgroundColor: "beige",
         color: "black",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position:"relative",
+        top:"185px",
+        fontSize:"8px"
       }}
     >
       Made to make your life easy from Shailesh ✌✌✌

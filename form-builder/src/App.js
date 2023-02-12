@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div className="align-center color">
        <h2>
-       FORM STRUCTURE BUILDER
+       HTML CODE STRUCTURE BUILDER
       </h2> 
         </div>
       <DataCreator/>
