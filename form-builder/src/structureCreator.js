@@ -73,8 +73,8 @@ function StructureCreator({ serialNo, question, num, keyCreator }) {
                               id:'${
                                 newAllQuestionKeyCombinationArray[num - 1]
                               }'+'-'+option.id,disabled:vm.isReadOnlyField('${
-    newAllQuestionKeyCombinationArray[num - 1]
-  }')
+                                newAllQuestionKeyCombinationArray[num - 1]
+                            }')
                             }" />
                         <label
                           data-bind="text:option.label, attr:{for:'${
@@ -90,8 +90,8 @@ function StructureCreator({ serialNo, question, num, keyCreator }) {
                         data-bind="expandable:{min:1},value:vm.formData.${
                           newAllQuestionKeyCombinationArray[num - 1]
                         }_remarks,attr:{readonly:vm.isReadOnlyField('${
-    newAllQuestionKeyCombinationArray[num - 1]
-  }_remarks')}"></textarea>
+                          newAllQuestionKeyCombinationArray[num - 1]
+                        }_remarks')}"></textarea>
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,7 @@ function DataCreator() {
   const [num, setNum] = useState(1);
 
   return (
-    <div>
+    <div className="border-grey p-30 mb-20">
       <input
         className="border-one p-3 mr-10"
         placeholder="enter serial no."

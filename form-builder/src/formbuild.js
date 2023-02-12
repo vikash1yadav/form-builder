@@ -4,11 +4,12 @@ import JsListCreator from "./JSListCreator";
 import KeyListCreator from "./KeyListCreator";
 import keyCreator, { newAllQuestionKeyCombinationArray } from "./keyCreator";
 import StructureCreator from "./structureCreator";
+import "./dataCreator.css"
 
 function Formbuild() {
   return (
     <div>
-      <div>LIST OF KEYS</div>
+      <div className="mb-8 mt-15">HTML STRUCTURE</div>
 
       {questionsArray.map((item) => (
         <>
@@ -23,12 +24,12 @@ function Formbuild() {
           </div>
         </>
       ))}
-      <div>LIST OF KEYS FOR JAVASCRIPT FILE</div>
+      <div className="mb-8 mt-15">LIST OF KEYS FOR JAVASCRIPT FILE</div>
       <div className="border-grey p-10">
         <JsListCreator array={newAllQuestionKeyCombinationArray} />
       </div>
-      <div>LIST OF KEYS FOR OUTPUT REPORT</div>
-      <div className="border-grey p-10">
+      <div className="mb-8 mt-15">LIST OF KEYS FOR OUTPUT REPORT</div>
+      <div className="border-grey p-10 mb-8" style={{ wordBreak: "break-word" }}>
         <KeyListCreator array={newAllQuestionKeyCombinationArray} />
       </div>
     </div>

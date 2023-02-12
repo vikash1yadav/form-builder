@@ -41,4 +41,8 @@ input:focus{
 }
 .p-10{
   padding: 10px;  
+  border-radius: 10px;
+}
+.align-center{
+    text-align: center;
 }
