@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div>
-      {/* Made by ❤ from shailesh */}
+    <div
+      style={{
+        height: "30px",
+        backgroundColor: "beige",
+        color: "black",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      Made to make your life easy from Shailesh ✌✌✌
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

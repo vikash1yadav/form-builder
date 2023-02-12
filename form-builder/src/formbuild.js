@@ -9,7 +9,7 @@ import "./dataCreator.css"
 function Formbuild() {
   return (
     <div>
-      <div className="mb-8 mt-15">HTML STRUCTURE</div>
+      <div className="mb-8 mt-15 color">HTML STRUCTURE</div>
 
       {questionsArray.map((item) => (
         <>
@@ -20,6 +20,7 @@ function Formbuild() {
               serialNo={item.serialNo}
               question={item.question}
               keyCreator={keyCreator}
+              extraField={item.extraField}
             />
           </div>
         </>

@@ -39,8 +39,9 @@ let emptyKeyArray = [
   "all_mandatory_certificates",
 ];
 
-function StructureCreator({ serialNo, question, num, keyCreator }) {
+function StructureCreator({ serialNo, question, num, keyCreator ,extraField}) {
   keyCreator(question);
+  console.log(extraField,"Extrafield")
 
   const structureHTML = `
     <div class="section">
