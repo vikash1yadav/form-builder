@@ -12,7 +12,7 @@ function Footer() {
         alignItems: "center",
         justifyContent: "center",
         position:"relative",
-        top:"185px",
+        top:"210px",
         fontSize:"8px"
       }}
     >
