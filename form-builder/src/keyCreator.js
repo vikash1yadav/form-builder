@@ -1,5 +1,5 @@
 export let newAllQuestionKeyCombinationArray = [];
-const pronounArray = [
+const nonKeyWords = [
   "as",
   "and",
   "does",
@@ -27,8 +27,8 @@ function keyCreator(keyquestion) {
     singleQuestionKeyCombinationArray.push(key.toLowerCase());
     if (wordsArray.indexOf(element3) === wordsArray.length - 1) break;
   }
-  for (let index = 0; index < pronounArray.length; index++) {
-    const element = pronounArray[index];
+  for (let index = 0; index < nonKeyWords.length; index++) {
+    const element = nonKeyWords[index];
     singleQuestionKeyCombinationArray =
       singleQuestionKeyCombinationArray.filter(
         (word) => !word.includes(element)
