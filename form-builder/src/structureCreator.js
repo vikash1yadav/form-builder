@@ -1,6 +1,5 @@
 import { newAllQuestionKeyCombinationArray } from "./keyCreator";
-let emptyKeyArray = [
-];
+let emptyKeyArray = [];
 
 function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
   keyCreator(question);
@@ -22,39 +21,30 @@ function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
                         as:'option'
                       }">
                       <div class="radio-common"
-                        data-bind="css:{'selected':vm.formData.${
-                          emptyKeyArray[num - 1]
-                        }()===option.id}">
-                        <input type="radio" name="${
-                          emptyKeyArray[num - 1]
-                        }" data-bind="
+                        data-bind="css:{'selected':vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
+    }()===option.id}">
+                        <input type="radio" name="${newAllQuestionKeyCombinationArray[num - 1]
+    }" data-bind="
                             checkedValue: option.id,
-                            checked: vm.formData.${
-                              emptyKeyArray[num - 1]
-                            }, 
+                            checked: vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
+    }, 
                             attr:{
-                              id:'${
-                                emptyKeyArray[num - 1]
-                              }'+'-'+option.id,disabled:vm.isReadOnlyField('${
-    emptyKeyArray[num - 1]
-  }')
+                              id:'${newAllQuestionKeyCombinationArray[num - 1]
+    }'+'-'+option.id,disabled:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
+    }')
                             }" />
                         <label
-                          data-bind="text:option.label, attr:{for:'${
-                            emptyKeyArray[num - 1]
-                          }'+'-'+option.id}"></label>
+                          data-bind="text:option.label, attr:{for:'${newAllQuestionKeyCombinationArray[num - 1]
+    }'+'-'+option.id}"></label>
                       </div>
                     </div>
                     <div class="col-9 ors-form-control textarea-input" data-fieldtype="textarea">
-                      <textarea class="textarea-text" name="${
-                        newAllQuestionKeyCombinationArray[num - 1]
-                      }_remarks"
+                      <textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
+    }_remarks"
                         placeholder="Remarks by Auditor" style="height: 30px;"
-                        data-bind="expandable:{min:1},value:vm.formData.${
-                          newAllQuestionKeyCombinationArray[num - 1]
-                        }_remarks,attr:{readonly:vm.isReadOnlyField('${
-    newAllQuestionKeyCombinationArray[num - 1]
-  }_remarks')}"></textarea>
+                        data-bind="expandable:{min:1},value:vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
+    }_remarks,attr:{readonly:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
+    }_remarks')}"></textarea>
                     </div>
                   </div>
                 </div>
