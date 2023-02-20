@@ -1,5 +1,6 @@
 export let newAllQuestionKeyCombinationArray = [];
 const nonKeyWords = [
+  "the",
   "as",
   "and",
   "does",
@@ -15,24 +16,44 @@ const nonKeyWords = [
   "is",
   "any",
   "to",
+  "what",
+  "your",
+  "a",
+  "for",
+  "are",
+  "or",
+  "by",
+  "have",
+  "with",
+  "not",
+  "they",
+  "per"
 ];
 function keyCreator(keyquestion) {
   let singleQuestionKeyCombinationArray = [];
-  const wordsArray = keyquestion.split(" ");
+  let wordsArray = keyquestion.split(" ");
+  for (let index = 0; index < nonKeyWords.length; index++) {
+    const element = nonKeyWords[index];
+    wordsArray = wordsArray.filter((word, i) => {
+      if (word.toLowerCase() === element.toLowerCase()) {
+        // If the word is found, check if it is separate
+        if ((i === 0 || !/\w/.test(wordsArray[i - 1])) && (i === wordsArray.length - 1 || !/\w/.test(wordsArray[i + 1]))) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return true;
+      }
+    });
+  }
+
   for (let i = 0; i < wordsArray.length; i++) {
     const element1 = wordsArray[i];
     const element2 = wordsArray[i + 1];
-    const element3 = wordsArray[i + 2];
-    const key = `${element1}_${element2}_${element3}`;
+    const key = `${element1}_${element2}`;
     singleQuestionKeyCombinationArray.push(key.toLowerCase());
-    if (wordsArray.indexOf(element3) === wordsArray.length - 1) break;
-  }
-  for (let index = 0; index < nonKeyWords.length; index++) {
-    const element = nonKeyWords[index];
-    singleQuestionKeyCombinationArray =
-      singleQuestionKeyCombinationArray.filter(
-        (word) => !word.includes(element)
-      );
+    if (wordsArray.indexOf(element2) === wordsArray.length - 1) break;
   }
 
   var randomKeyOfSingleQuestion =

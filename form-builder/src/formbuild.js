@@ -4,6 +4,7 @@ import JsListCreator from "./JSListCreator";
 import KeyListCreator from "./KeyListCreator";
 import keyCreator, { newAllQuestionKeyCombinationArray } from "./keyCreator";
 import StructureCreator from "./structureCreator";
+import ApiListCreator from "./apiListCreator";
 import "./dataCreator.css"
 
 function Formbuild() {
@@ -32,6 +33,9 @@ function Formbuild() {
       <div className="mb-8 mt-15">LIST OF KEYS FOR OUTPUT REPORT</div>
       <div className="border-grey p-10 mb-8" style={{ wordBreak: "break-word" }}>
         <KeyListCreator array={newAllQuestionKeyCombinationArray} />
+      </div>
+      <div className="border-grey p-10 mb-8" style={{ wordBreak: "break-word" }}>
+        <ApiListCreator array={newAllQuestionKeyCombinationArray} />
       </div>
     </div>
   );
