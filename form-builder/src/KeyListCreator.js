@@ -1,11 +1,11 @@
-function KeyListCreator({ array }) {
+function KeyListCreator({ dataKeyArray }) {
     return (
       <>
-        <div>
-          {array.map((item) => (
-            <>{`"${item}",`}</>
+        
+          {dataKeyArray.map((item, indx) => (
+            <div key={indx}>{`"${item}",`}</div>
           ))}
-        </div>
+        
       </>
     );
   }

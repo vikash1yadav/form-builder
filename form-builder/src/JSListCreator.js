@@ -1,8 +1,8 @@
-function JsListCreator({ array }) {
+function JsListCreator({dataKeyArray }) {
     return (
       <>
-        {array.map((item) => (
-          <>{`"${item}": "" , "${item}_remarks":"",`}</>
+        {dataKeyArray.map((item, indx) => (
+          <div key={indx}>{`"${item}": "" , "${item}_remarks":"",`}</div>
         ))}
       </>
     );

@@ -57,3 +57,36 @@ input:focus{
 .br-10{
     border-radius: 6px;
 }
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+.expandable-header {
+    cursor: pointer;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.whiteSpace{
+    white-space: pre;
+}
+/* .expandable-content {
+    display: none;
+} */
+
+span {
+    font-size: 24px;
+    /* adjust size as needed */
+    color: #333;
+    /* adjust color as needed */
+}

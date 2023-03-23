@@ -1,12 +1,12 @@
 import React from 'react'
 
-function ApiListCreator({ array }) {
+function ApiListCreator({ dataKeyArray }) {
   return (
     <div>
        
-      {array.map(item => {
+      {dataKeyArray.map((item, indx) => {
 
-       return <> 
+       return <div key={indx}> 
             { `{"${item}": {
                 "is_required" : false,
                 "is_readonly" : false,
@@ -14,7 +14,7 @@ function ApiListCreator({ array }) {
                 "type_of" : "string"
             }},`}
            
-        </>
+        </div>
       })}
     </div>
   )

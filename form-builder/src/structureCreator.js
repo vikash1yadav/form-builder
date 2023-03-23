@@ -1,9 +1,11 @@
-import { newAllQuestionKeyCombinationArray } from "./keyCreator";
-let emptyKeyArray = [];
+import { memo } from "react";
+// import { newAllQuestionKeyCombinationArray } from "./keyCreator";
+// let emptyKeyArray = [];
 
-function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
+function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionKeyCombinationArray, extraField }) {
   keyCreator(question);
-
+console.log("call fun str");
+  /*for input*/
   const structureHTML = `
     <div class="section">
               <div class="rows">
@@ -27,7 +29,7 @@ function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
     }" data-bind="
                             checkedValue: option.id,
                             checked: vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
-    }, 
+    },
                             attr:{
                               id:'${newAllQuestionKeyCombinationArray[num - 1]
     }'+'-'+option.id,disabled:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
@@ -38,7 +40,7 @@ function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
     }'+'-'+option.id}"></label>
                       </div>
                     </div>
-                    <div class="col-9 ors-form-control textarea-input" data-fieldtype="textarea">
+                    <div class="col-9 ors-form-control textarea-input p-0" data-fieldtype="textarea">
                       <textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
     }_remarks"
                         placeholder="Remarks by Auditor" style="height: 30px;"
@@ -57,4 +59,7 @@ function StructureCreator({ serialNo, question, num, keyCreator, extraField }) {
     </>
   );
 }
-export default StructureCreator;
+// export default StructureCreator;
+
+export default memo(StructureCreator);
+
